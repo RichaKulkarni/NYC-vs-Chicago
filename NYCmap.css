@@ -1,0 +1,541 @@
+body{
+    background: #F7F7EB;
+}
+
+em{
+    font-style: normal;
+    float:right;
+}
+#subinfo{
+    padding:0px;
+    margin:10px;
+    width: 800px;
+}
+
+.Cfeatures{
+    fill: #B3DDF2;
+    stroke: #777;
+    stroke-linejoin: round;
+    stroke-width: 1.5;
+}
+#chicagoLabel{
+    font: 35px sans-serif;
+    fill: rgba(128, 128, 128, 0.86);
+}
+
+.NYfeatures{
+    fill: white;
+    stroke: #777;
+    stroke-linejoin: round;
+    stroke-width: 1.5;
+}
+#nyLabel{			
+    font: 35px sans-serif;
+    fill: rgba(128, 128, 128, 0.86);
+}
+
+div.tooltip {	
+    position: absolute;			
+    text-align: left;			
+    width: 175px;					
+    height: 110px;					
+    padding: 10px;				
+    font: 14px sans-serif;		
+    background: #7e7e7e;
+    color: white;
+    border: 5px;		
+    border-radius: 8px;			
+    pointer-events: none;
+}
+div#crime-help{
+    position: relative;
+    left: 110px;
+    bottom:-3px;
+    font-size: 8px;
+}
+div#help{
+    position: relative;
+    left: 60px;
+    bottom:-3px;
+    font-size: 8px;
+    text-decoration: underline;
+}
+div#ny-vs-chicago-title{
+    font: 17px Sans-Serif;
+	text-align: center;
+    color: #222;
+    text-shadow: 0px 2px 3px #F7F7EB;
+}
+
+div#storyline{
+    margin-left: auto;
+    margin-right: auto;
+    font: 11px Sans-Serif;
+	text-align: center;
+    width: 550px;
+    color: #3b3b3b;
+    text-shadow: 0px 2px 3px #F7F7EB;
+}
+
+div#slider{
+    top:40px;
+    width:400px;
+}
+div#slider-left-value{
+    background:white;
+    border: solid 1px #d3d3d3;
+    border-radius: 4px;
+    font-weight: bold;
+    width:80px;
+    position:relative;
+    right:260px;
+    top:22px;
+    color:black;
+}
+div#slider-right-value{
+    background:white;
+    border: solid 1px #d3d3d3;
+    border-radius: 4px;
+    font-weight: bold;
+    color:black;
+    width:80px;
+    position: relative;
+    top:2px;
+    left:260px;
+}
+div#slider-text{
+    border: solid 0px #d3d3d3;
+    border-radius: 4px;
+    font-weight: bold;
+    color:black;
+    width:150px;
+    position: relative;
+    top:30px;
+    left:0px;
+}
+hideText{
+    visibility: hidden;
+}
+.Cfeatures{
+    fill: white;
+    stroke: #777;
+    stroke-linejoin: round;
+    stroke-width: 1.5;
+}
+
+.NYfeatures{
+    fill: white;
+    stroke: #777;
+    stroke-linejoin: round;
+    stroke-width: 1.5;
+}
+
+ul{
+    list-style: none;
+}
+/* Original buttons
+.PopButton {
+-moz-box-shadow: 0px 0px 0px 2px #3182bd;
+	-webkit-box-shadow: 0px 0px 0px 2px #3182bd;
+	box-shadow: 0px 0px 0px 2px #3182bd;
+	background-color:#6baed6;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:19px;
+	padding:7px 19px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+
+.PopButton:hover {
+  background-color: #08519c;
+  text-decoration: none;
+}
+
+.LifeButton {
+	-moz-box-shadow: 0px 0px 0px 2px rgb(224, 144, 36);
+	-webkit-box-shadow: 0px 0px 0px 2px rgb(224, 144, 36);
+	box-shadow: 0px 0px 0px 2px rgb(224, 144, 36);
+	background-color:rgba(248, 161, 41, 0.94);
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:19px;
+	padding:7px 19px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+
+.LifeButton:hover {
+  background: rgb(224, 144, 36);
+  text-decoration: none;
+}
+
+.IncomeButton {
+	-moz-box-shadow: 0px 0px 0px 2px rgb(49,163,84);
+	-webkit-box-shadow: 0px 0px 0px 2px rgb(49,163,84);
+	box-shadow: 0px 0px 0px 2px rgb(49,163,84);
+	background-color:rgb(114, 212, 141);
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #302D36;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:19px;
+	padding:7px 19px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+
+.IncomeButton:hover {
+  background: rgb(49,163,84);
+  text-decoration: none;
+}
+
+.CrimeButton {
+	-moz-box-shadow: 0px 0px 0px 2px #c44141;
+	-webkit-box-shadow: 0px 0px 0px 2px #c44141;
+	box-shadow: 0px 0px 0px 2px #c44141;
+	background-color:rgb(242, 145, 132);
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:19px;
+	padding:7px 19px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+
+.CrimeButton:hover {
+  background: #c44141;
+  text-decoration: none;
+}
+*/
+
+/*New Buttons: Gradient Effect
+.PopButton {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7fa9e8), color-stop(1, #156dd9));
+	background:-moz-linear-gradient(top, #7fa9e8 5%, #156dd9 100%);
+	background:-webkit-linear-gradient(top, #7fa9e8 5%, #156dd9 100%);
+	background:-o-linear-gradient(top, #7fa9e8 5%, #156dd9 100%);
+	background:-ms-linear-gradient(top, #7fa9e8 5%, #156dd9 100%);
+	background:linear-gradient(to bottom, #7fa9e8 5%, #156dd9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7fa9e8', endColorstr='#156dd9',GradientType=0);
+	background-color:#7fa9e8;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:19px;
+	font-weight:bold;
+	padding:9px 14px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.PopButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #156dd9), color-stop(1, #7fa9e8));
+	background:-moz-linear-gradient(top, #156dd9 5%, #7fa9e8 100%);
+	background:-webkit-linear-gradient(top, #156dd9 5%, #7fa9e8 100%);
+	background:-o-linear-gradient(top, #156dd9 5%, #7fa9e8 100%);
+	background:-ms-linear-gradient(top, #156dd9 5%, #7fa9e8 100%);
+	background:linear-gradient(to bottom, #156dd9 5%, #7fa9e8 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#156dd9', endColorstr='#7fa9e8',GradientType=0);
+	background-color:#156dd9;
+}
+.PopButton:active {
+	position:relative;
+	top:1px;
+}
+.LifeButton {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d97038), color-stop(1, #994640));
+	background:-moz-linear-gradient(top, #d97038 5%, #994640 100%);
+	background:-webkit-linear-gradient(top, #d97038 5%, #994640 100%);
+	background:-o-linear-gradient(top, #d97038 5%, #994640 100%);
+	background:-ms-linear-gradient(top, #d97038 5%, #994640 100%);
+	background:linear-gradient(to bottom, #d97038 5%, #994640 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d97038', endColorstr='#994640',GradientType=0);
+	background-color:#d97038;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:19px;
+	font-weight:bold;
+	padding:9px 14px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.LifeButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #994640), color-stop(1, #d97038));
+	background:-moz-linear-gradient(top, #994640 5%, #d97038 100%);
+	background:-webkit-linear-gradient(top, #994640 5%, #d97038 100%);
+	background:-o-linear-gradient(top, #994640 5%, #d97038 100%);
+	background:-ms-linear-gradient(top, #994640 5%, #d97038 100%);
+	background:linear-gradient(to bottom, #994640 5%, #d97038 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#994640', endColorstr='#d97038',GradientType=0);
+	background-color:#994640;
+}
+.LifeButton:active {
+	position:relative;
+	top:1px;
+}
+.CrimeButton {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7d1818), color-stop(1, #f53b3b));
+	background:-moz-linear-gradient(top, #7d1818 5%, #f53b3b 100%);
+	background:-webkit-linear-gradient(top, #7d1818 5%, #f53b3b 100%);
+	background:-o-linear-gradient(top, #7d1818 5%, #f53b3b 100%);
+	background:-ms-linear-gradient(top, #7d1818 5%, #f53b3b 100%);
+	background:linear-gradient(to bottom, #7d1818 5%, #f53b3b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d1818', endColorstr='#f53b3b',GradientType=0);
+	background-color:#7d1818;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:19px;
+	font-weight:bold;
+	padding:9px 14px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.CrimeButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f53b3b), color-stop(1, #7d1818));
+	background:-moz-linear-gradient(top, #f53b3b 5%, #7d1818 100%);
+	background:-webkit-linear-gradient(top, #f53b3b 5%, #7d1818 100%);
+	background:-o-linear-gradient(top, #f53b3b 5%, #7d1818 100%);
+	background:-ms-linear-gradient(top, #f53b3b 5%, #7d1818 100%);
+	background:linear-gradient(to bottom, #f53b3b 5%, #7d1818 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f53b3b', endColorstr='#7d1818',GradientType=0);
+	background-color:#f53b3b;
+}
+.CrimeButton:active {
+	position:relative;
+	top:1px;
+}
+
+.IncomeButton {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #317a44), color-stop(1, #59ab2c));
+	background:-moz-linear-gradient(top, #317a44 5%, #59ab2c 100%);
+	background:-webkit-linear-gradient(top, #317a44 5%, #59ab2c 100%);
+	background:-o-linear-gradient(top, #317a44 5%, #59ab2c 100%);
+	background:-ms-linear-gradient(top, #317a44 5%, #59ab2c 100%);
+	background:linear-gradient(to bottom, #317a44 5%, #59ab2c 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#317a44', endColorstr='#59ab2c',GradientType=0);
+	background-color:#317a44;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:19px;
+	font-weight:bold;
+	padding:9px 14px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.IncomeButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #59ab2c), color-stop(1, #317a44));
+	background:-moz-linear-gradient(top, #59ab2c 5%, #317a44 100%);
+	background:-webkit-linear-gradient(top, #59ab2c 5%, #317a44 100%);
+	background:-o-linear-gradient(top, #59ab2c 5%, #317a44 100%);
+	background:-ms-linear-gradient(top, #59ab2c 5%, #317a44 100%);
+	background:linear-gradient(to bottom, #59ab2c 5%, #317a44 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#59ab2c', endColorstr='#317a44',GradientType=0);
+	background-color:#59ab2c;
+}
+.IncomeButton:active {
+	position:relative;
+	top:1px;
+}
+*/
+/*Flat Button*/
+.PopButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #7a8eb9;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #7a8eb9;
+	box-shadow:inset 0px 1px 0px 0px #7a8eb9;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #637aad), color-stop(1, #5972a7));
+	background:-moz-linear-gradient(top, #637aad 5%, #5972a7 100%);
+	background:-webkit-linear-gradient(top, #637aad 5%, #5972a7 100%);
+	background:-o-linear-gradient(top, #637aad 5%, #5972a7 100%);
+	background:-ms-linear-gradient(top, #637aad 5%, #5972a7 100%);
+	background:linear-gradient(to bottom, #637aad 5%, #5972a7 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#637aad', endColorstr='#5972a7',GradientType=0);
+	background-color:#637aad;
+	border:1px solid #314179;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:8px 13px;
+	text-decoration:none;
+}
+.PopButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5972a7), color-stop(1, #637aad));
+	background:-moz-linear-gradient(top, #5972a7 5%, #637aad 100%);
+	background:-webkit-linear-gradient(top, #5972a7 5%, #637aad 100%);
+	background:-o-linear-gradient(top, #5972a7 5%, #637aad 100%);
+	background:-ms-linear-gradient(top, #5972a7 5%, #637aad 100%);
+	background:linear-gradient(to bottom, #5972a7 5%, #637aad 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5972a7', endColorstr='#637aad',GradientType=0);
+	background-color:#5972a7;
+}
+.PopButton:active {
+	position:relative;
+	top:1px;
+}
+.LifeButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f5a94c), color-stop(1, #d4811b));
+	background:-moz-linear-gradient(top, #f5a94c 5%, #d4811b 100%);
+	background:-webkit-linear-gradient(top, #f5a94c 5%, #d4811b 100%);
+	background:-o-linear-gradient(top, #f5a94c 5%, #d4811b 100%);
+	background:-ms-linear-gradient(top, #f5a94c 5%, #d4811b 100%);
+	background:linear-gradient(to bottom, #f5a94c 5%, #d4811b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5a94c', endColorstr='#d4811b',GradientType=0);
+	background-color:#f5a94c;
+	border:1px solid #eeb44f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:9px 11px;
+	text-decoration:none;
+}
+.LifeButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d4811b), color-stop(1, #f5a94c));
+	background:-moz-linear-gradient(top, #d4811b 5%, #f5a94c 100%);
+	background:-webkit-linear-gradient(top, #d4811b 5%, #f5a94c 100%);
+	background:-o-linear-gradient(top, #d4811b 5%, #f5a94c 100%);
+	background:-ms-linear-gradient(top, #d4811b 5%, #f5a94c 100%);
+	background:linear-gradient(to bottom, #d4811b 5%, #f5a94c 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d4811b', endColorstr='#f5a94c',GradientType=0);
+	background-color:#d4811b;
+}
+.LifeButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+.IncomeButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #9acc85;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #9acc85;
+	box-shadow:inset 0px 1px 0px 0px #9acc85;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #74ad5a), color-stop(1, #68a54b));
+	background:-moz-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-webkit-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-o-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-ms-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#74ad5a', endColorstr='#68a54b',GradientType=0);
+	background-color:#74ad5a;
+	border:1px solid #3b6e22;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:8px 13px;
+	text-decoration:none;
+}
+.IncomeButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #68a54b), color-stop(1, #74ad5a));
+	background:-moz-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-webkit-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-o-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-ms-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#68a54b', endColorstr='#74ad5a',GradientType=0);
+	background-color:#68a54b;
+}
+.IncomeButton:active {
+	position:relative;
+	top:1px;
+}
+
+.CrimeButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f29c93;
+	box-shadow:inset 0px 1px 0px 0px #f29c93;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100));
+	background:-moz-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+	background:-webkit-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+	background:-o-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+	background:-ms-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+	background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100',GradientType=0);
+	background-color:#fe1a00;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:9px 11px;
+	text-decoration:none;
+}
+.CrimeButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00));
+	background:-moz-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:-webkit-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:-o-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:-ms-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#fe1a00',GradientType=0);
+	background-color:#ce0100;
+}
+.CrimeButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+
+#chicagoLabel{
+    font: 35px sans-serif;
+    fill: rgba(128, 128, 128, 0.86);
+}
+
+#nyLabel{			
+    font: 35px sans-serif;
+    fill: rgba(128, 128, 128, 0.86);
+}
